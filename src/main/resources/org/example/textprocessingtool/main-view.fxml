@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.textprocessingtool.dataManager.MainAppController">
+    <children>
+        <TextField fx:id="textInput" promptText="Enter text" />
+        <TextField fx:id="regexInput" promptText="Enter regex" />
+        <ComboBox fx:id="collectionComboBox">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="ArrayList" />
+                    <String fx:value="HashSet" />
+                    <String fx:value="LinkedHashMap" />
+                    <String fx:value="HashMap" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <ListView fx:id="listView" />
+        <TextArea fx:id="resultArea" />
+        <Label fx:id="currentCollectionLabel" text="Current Collection: ArrayList" />
+        <Button text="Add" onMouseClicked="#handleAdd" />
+        <Button text="Update" onMouseClicked="#handleUpdate" />
+        <Button text="Delete" onMouseClicked="#handleDelete" />
+        <Button text="Search" onMouseClicked="#handleSearch" />
+        <Button text="Switch Collection" onMouseClicked="#handleCollectionSwitch" />
+    </children>
+</VBox>
