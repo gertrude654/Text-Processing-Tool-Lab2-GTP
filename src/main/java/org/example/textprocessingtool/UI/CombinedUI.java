@@ -93,7 +93,7 @@ public class CombinedUI extends Application {
         regexInput = new TextField();
 
         collectionComboBox = new ComboBox<>();
-        collectionComboBox.getItems().addAll("ArrayList", "HashSet", "LinkedHashMap", "HashMap");
+        collectionComboBox.getItems().addAll("ArrayList", "HashSet", "HashMap");
         collectionComboBox.setValue("ArrayList");
 
         collectionComboBox.valueProperty().addListener((obs, oldVal, newVal) -> handleCollectionSwitch(null));
@@ -242,11 +242,8 @@ public class CombinedUI extends Application {
             case "HashSet":
                 listView.getItems().addAll(controller.getDataSet());
                 break;
-            case "LinkedHashMap":
-                for (Map.Entry<Integer, String> entry : controller.getDataMap().entrySet()) {
-                    listView.getItems().add(entry.getKey() + ": " + entry.getValue());
-                }
-                break;
+
+
             case "HashMap":
                 for (Map.Entry<Integer, String> entry : controller.getDataHashMap().entrySet()) {
                     listView.getItems().add(entry.getKey() + ": " + entry.getValue());

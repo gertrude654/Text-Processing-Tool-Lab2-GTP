@@ -10,7 +10,6 @@ public interface GenericRepository<T> {
     Collection<T> getDataCollection();
     Set<T> getDataSet();
     Map<Integer, T> getDataMap();
-    Map<Integer, T> getDataHashMap();
     void addData(String collectionType, T data);
     void updateData(String collectionType, T oldData, T newData);
     void deleteData(String collectionType, T data);

@@ -13,6 +13,5 @@ public interface GenericController<T> {
     Collection<T> getDataCollection();
     Set<T> getDataSet();
     Map<Integer, T> getDataMap();
-    Map<Integer, T> getDataHashMap();
 }
 

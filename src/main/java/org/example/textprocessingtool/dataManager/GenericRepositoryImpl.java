@@ -34,10 +34,6 @@ public class GenericRepositoryImpl<T> implements GenericRepository<T> {
         return dataMap;
     }
 
-    @Override
-    public Map<Integer, T> getDataHashMap() {
-        return dataHashMap;
-    }
 
     @Override
     public void addData(String collectionType, T data) {
@@ -47,9 +43,6 @@ public class GenericRepositoryImpl<T> implements GenericRepository<T> {
                 break;
             case "HashSet":
                 dataSet.add(data);
-                break;
-            case "LinkedHashMap":
-                dataMap.put(nextMapKey++, data);
                 break;
             case "HashMap":
                 dataHashMap.put(nextHashMapKey++, data);
@@ -68,14 +61,7 @@ public class GenericRepositoryImpl<T> implements GenericRepository<T> {
                 dataSet.remove(oldData);
                 dataSet.add(newData);
                 break;
-            case "LinkedHashMap":
-                for (Map.Entry<Integer, T> entry : dataMap.entrySet()) {
-                    if (entry.getValue().equals(oldData)) {
-                        dataMap.put(entry.getKey(), newData);
-                        break;
-                    }
-                }
-                break;
+
             case "HashMap":
                 for (Map.Entry<Integer, T> entry : dataHashMap.entrySet()) {
                     if (entry.getValue().equals(oldData)) {
@@ -96,9 +82,7 @@ public class GenericRepositoryImpl<T> implements GenericRepository<T> {
             case "HashSet":
                 dataSet.remove(data);
                 break;
-            case "LinkedHashMap":
-                dataMap.values().remove(data);
-                break;
+
             case "HashMap":
                 dataHashMap.values().remove(data);
                 break;
@@ -113,8 +97,6 @@ public class GenericRepositoryImpl<T> implements GenericRepository<T> {
                 return dataCollection.stream().filter(data -> pattern.matcher(data.toString()).find()).collect(Collectors.toList());
             case "HashSet":
                 return dataSet.stream().filter(data -> pattern.matcher(data.toString()).find()).collect(Collectors.toList());
-            case "LinkedHashMap":
-                return dataMap.values().stream().filter(data -> pattern.matcher(data.toString()).find()).collect(Collectors.toList());
             case "HashMap":
                 return dataHashMap.values().stream().filter(data -> pattern.matcher(data.toString()).find()).collect(Collectors.toList());
             default:
