@@ -30,10 +30,9 @@ public class GenericRepositoryImpl<T> implements GenericRepository<T> {
     }
 
     @Override
-    public Map<Integer, T> getDataMap() {
-        return dataMap;
+    public Map<Integer, T> getDataHashMap() {
+        return dataHashMap;
     }
-
 
     @Override
     public void addData(String collectionType, T data) {

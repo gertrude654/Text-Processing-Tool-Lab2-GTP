@@ -12,6 +12,6 @@ public interface GenericController<T> {
     List<T> searchData(String collectionType, String regex);
     Collection<T> getDataCollection();
     Set<T> getDataSet();
-    Map<Integer, T> getDataMap();
+    Map<Integer, T> getDataHashMap();
 }
 

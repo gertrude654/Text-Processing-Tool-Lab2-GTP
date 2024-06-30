@@ -44,9 +44,7 @@ public class GenericControllerImpl<T> implements GenericController<T> {
     }
 
     @Override
-    public Map<Integer, T> getDataMap() {
-        return repository.getDataMap();
+    public Map<Integer, T> getDataHashMap() {
+        return repository.getDataHashMap();
     }
-
-
 }

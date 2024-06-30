@@ -13,9 +13,7 @@ module org.example.textprocessingtool {
     exports org.example.textprocessingtool.UI;
     opens org.example.textprocessingtool.UI to javafx.fxml;
     // Export the package where Main class resides
-    exports org.example.textprocessingtool.data;
-    exports org.example.textprocessingtool.dataManager;
-    opens org.example.textprocessingtool.data to javafx.fxml;
+   exports org.example.textprocessingtool.dataManager;
     opens org.example.textprocessingtool.dataManager to javafx.fxml;
     exports org.example.textprocessingtool.regex;
 

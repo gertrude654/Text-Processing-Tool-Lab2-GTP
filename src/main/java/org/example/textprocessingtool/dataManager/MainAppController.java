@@ -86,11 +86,6 @@ public class MainAppController {
             case "HashSet":
                 listView.getItems().addAll(controller.getDataSet());
                 break;
-            case "LinkedHashMap":
-                for (Map.Entry<Integer, String> entry : controller.getDataMap().entrySet()) {
-                    listView.getItems().add(entry.getKey() + ": " + entry.getValue());
-                }
-                break;
             case "HashMap":
                 for (Map.Entry<Integer, String> entry : controller.getDataHashMap().entrySet()) {
                     listView.getItems().add(entry.getKey() + ": " + entry.getValue());
