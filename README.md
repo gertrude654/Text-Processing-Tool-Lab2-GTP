@@ -1,12 +1,12 @@
 # Text Processing Tool
 
-This is a JavaFX-based application for managing collections of text data and performing regex operations. The application allows users to add, update, delete, and search text data across different types of collections (ArrayList, HashSet, LinkedHashMap, and HashMap). Additionally, it provides regex functionalities such as validating emails, searching for patterns, matching patterns, and replacing text.
+This is a JavaFX-based application for managing collections of text data and performing regex operations. The application allows users to add, update, delete, and search text data across different types of collections (ArrayList, HashSet, and HashMap). Additionally, it provides regex functionalities such as validating emails, searching for patterns, matching patterns, and replacing text.
 
 ## Features
 
 - **Data Collection Management**: 
   - Add, update, and delete text entries.
-  - Switch between different types of collections: ArrayList, HashSet, LinkedHashMap, and HashMap.
+  - Switch between different types of collections: ArrayList, HashSet, and HashMap.
   - Search for text entries using regex patterns.
 
 - **Regex Operations**:
