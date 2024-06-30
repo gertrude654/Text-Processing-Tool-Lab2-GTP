@@ -17,6 +17,8 @@ module org.example.textprocessingtool {
     exports org.example.textprocessingtool.dataManager;
     opens org.example.textprocessingtool.data to javafx.fxml;
     opens org.example.textprocessingtool.dataManager to javafx.fxml;
+    exports org.example.textprocessingtool.regex;
+
 
 
 }

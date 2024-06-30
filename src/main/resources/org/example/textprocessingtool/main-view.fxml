@@ -4,6 +4,7 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.textprocessingtool.dataManager.MainAppController">
     <children>
         <TextField fx:id="textInput" promptText="Enter text" />
